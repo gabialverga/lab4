@@ -19,12 +19,6 @@ public class ControleDeAluno {
 		if (this.alunos.containsKey(matricula)) {
 			throw new NullPointerException("Matricula já cadastrada.");
 		}
-		if (nome.equals("") || nome.equals(null)) {
-			throw new NullPointerException("Nome do aluno invalido.");
-		}
-		if (curso.equals("") || curso.equals(null)) {
-			throw new NullPointerException("Curso invalido.");
-		}
 		this.alunos.put(matricula, new Aluno(matricula, nome, curso));
 		return ("Cadastro realizado!");
 	}
@@ -45,7 +39,7 @@ public class ControleDeAluno {
 		return ("Cadastro realizado!");
 	}
 
-	public String alucaAluno(String matricula, String grupo) {
+	public String alocaAluno(String matricula, String grupo) {
 		if (!this.gruposDeEstudos.containsKey(grupo)) {
 			throw new NullPointerException("Grupo não cadastrada.");
 		}
@@ -68,7 +62,7 @@ public class ControleDeAluno {
 			throw new NullPointerException("Aluno não cadastrada.");
 		}
 		this.alunosQueResponderam.add(this.alunos.get(matricula));
-		return "Aluno registrado.\n";
+		return "Aluno registrado.";
 	}
 
 	public String listaAlunoRespondeu() {

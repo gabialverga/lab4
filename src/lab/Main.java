@@ -54,7 +54,7 @@ public class Main {
 					System.out.println("\nGrupo:");
 					grupo = sc.nextLine();
 					try {
-						System.out.println(controle.alucaAluno(matricula, grupo) + "\n");
+						System.out.println(controle.alocaAluno(matricula, grupo) + "\n");
 					} catch (NullPointerException e) {
 						System.out.println(e.getMessage() + "\n");
 					}
